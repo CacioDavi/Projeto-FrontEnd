@@ -1,11 +1,12 @@
+
 import styled from "styled-components";
 
 const ButtonStyled = styled.button`
   background-color: ${({ $variant }) =>
-    $variant === "primary" ? "#C92071" : "#CCCCCC"};
+    $variant === "primary" ? "#991956" : "#CCCCCC"};
 
   color: ${({ $variant }) =>
-    $variant === "primary" ? "#ffffff" : "#C92071"};
+    $variant === "primary" ? "#FFFFFF" : "#C92071"};
 
   border: none;
   border-radius: 8px;
@@ -13,10 +14,14 @@ const ButtonStyled = styled.button`
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: background-color 0.3s ease;
 
   &:hover {
-    opacity: 0.8;
+    background-color: ${({ $variant }) =>
+      $variant === "primary" ? "#C92071" : "#8F8F8F"};
+
+    color: #FFFFFF;
   }
 `;
 
