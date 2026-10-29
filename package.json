@@ -24,7 +24,6 @@
     "type": "git",
     "url": "git+https://github.com/CacioDavi/Projeto-FrontEnd.git"
   },
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -33,7 +32,9 @@
   },
   "dependencies": {
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "styled-components": "^6.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -46,8 +47,6 @@
     "globals": "^17.13.0",
     "vite": "^8.3.5"
   },
-
   "license": "MIT",
   "author": "Cácio Davi, Tino Neto, Daniel Alves"
-
 }
