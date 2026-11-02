@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ButtonStyled = styled.button`
   background-color: ${({ $variant }) =>
-    $variant === "primary" ? "#991956" : "#CCCCCC"};
+    $variant === "primary" ? "#c92071" : "#CCCCCC"};
 
   color: ${({ $variant }) =>
     $variant === "primary" ? "#FFFFFF" : "#C92071"};
