@@ -1,8 +1,8 @@
 
-import Logo from './Logo';
+import Logo from '../../assets/logoHeader.svg';
 import './Header.css';
-import Button from "../components/Button";
-import cartIcon from "../assets/mini-cart.svg";
+import Button from "../Button";
+import cartIcon from "../../assets/Buy.svg";
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
       {}
       <div className="header-top">
 
-        <Logo />
+        <img src={Logo} alt="Logo da loja" className="logo" />
 
         <form className="search-form">
           <input
@@ -26,11 +26,11 @@ function Header() {
         </form>
 
         <div className="header-actions">
-          <Link to="/cadastro" className="register-link">
+          <Link to="/register" className="register-link">
             Cadastre-se
           </Link>
 
-          <Button>Entrar</Button>
+          <Button onClick={()=>{window.location = "/login"}}>Entrar</Button>
 
           <Link to="/carrinho" className="cart-link">
             <img src={cartIcon} alt="Carrinho de compras" />
@@ -42,9 +42,9 @@ function Header() {
       {/* Menu de navegação */}
       <nav className="navigation">
         <Link to="/">Home</Link>
-        <Link to="/produtos">Produtos</Link>
-        <Link to="/categorias">Categorias</Link>
-        <Link to="/meus-pedidos">Meus Pedidos</Link>
+        <Link to="/products">Produtos</Link>
+        <Link to="/categories">Categorias</Link>
+        <Link to="/orders">Meus Pedidos</Link>
       </nav>
     </header>
   );
