@@ -1,5 +1,6 @@
-
 .header {
+  position: relative;
+  z-index: 20;
   width: 100%;
   padding: 24px 5%;
   background-color: #ffffff;
@@ -7,7 +8,7 @@
   font-family: inherit;
 }
 
-/* Logo, pesquisa, cadastro, botão e carrinho */
+/* Linha superior: logo, pesquisa e ações */
 .header-top {
   display: flex;
   align-items: center;
@@ -15,7 +16,19 @@
   gap: 32px;
 }
 
-/* Barra de pesquisa */
+.logo-link {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Barra de pesquisa para desktop */
 .search-form {
   display: flex;
   align-items: center;
@@ -38,14 +51,40 @@
 }
 
 .search-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 44px;
+  padding: 0;
   border: none;
   background: transparent;
-  color: #666666;
-  font-size: 24px;
   cursor: pointer;
 }
 
-/* Ações à direita */
+/* Ícone de lupa feito em CSS */
+.search-icon {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #999999;
+  border-radius: 50%;
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: -3px;
+  width: 7px;
+  height: 1.5px;
+  background-color: #999999;
+  transform: rotate(48deg);
+  transform-origin: left center;
+}
+
+/* Ações à direita no desktop */
 .header-actions {
   display: flex;
   align-items: center;
@@ -53,13 +92,12 @@
   flex-shrink: 0;
 }
 
-
 .register-link {
   color: #474747;
   text-decoration: underline;
   white-space: nowrap;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -67,21 +105,42 @@
   color: #c92071;
 }
 
-
-/* Ícone do carrinho */
+/* Carrinho e contador */
 .cart-link {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .cart-link img {
+  display: block;
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
 
-/* Navegação */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 50%;
+  background-color: #ee4266;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1;
+}
+
+
+
+/* Navegação desktop */
 .navigation {
   display: flex;
   align-items: center;
@@ -89,19 +148,17 @@
   margin-top: 32px;
 }
 
-
-.navigation a {
+.navigation a,
+.mobile-navigation-links a {
   position: relative;
   font-family: 'Inter', sans-serif;
   color: #474747;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-
-/* Linha abaixo dos links */
 .navigation a::after {
   content: "";
   position: absolute;
@@ -114,10 +171,247 @@
   transition: transform 0.3s ease;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a.active,
+.mobile-navigation-links a:hover,
+.mobile-navigation-links a.active {
   color: #c92071;
 }
 
-.navigation a:hover::after {
+.navigation a:hover::after,
+.navigation a.active::after {
   transform: scaleX(1);
+}
+
+/* Elementos exclusivos do menu responsivo */
+.menu-toggle,
+.mobile-actions,
+.mobile-search-form,
+.mobile-menu-layer {
+  display: none;
+}
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 5% 16px;
+  }
+
+  .header-top {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 28px;
+    height: 32px;
+    padding: 2px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  
+
+
+  .logo-link {
+    justify-self: center;
+  }
+
+  .logo {
+    width: 132px;
+  }
+
+  .header-actions,
+  .navigation,
+  .header-top > .search-form {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 16px;
+  }
+
+  .mobile-search-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-search-form {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-top: 20px;
+    padding: 0 18px;
+  }
+
+  .mobile-search-form input {
+    padding: 17px 0;
+    font-size: 15px;
+  }
+
+  .mobile-search-form .search-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* Fundo escurecido e painel lateral */
+  .mobile-menu-layer {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+  }
+
+  .menu-backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: rgba(0, 0, 0, 0.38);
+    cursor: pointer;
+  }
+
+  .mobile-navigation {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: min(82%, 320px);
+    height: 100%;
+    padding: 30px 28px 32px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow-y: auto;
+    animation: slide-menu-in 0.22s ease-out;
+  }
+
+  .mobile-navigation-content h2 {
+    margin: 0 0 22px;
+    color: #474747;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .mobile-navigation-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .mobile-navigation-links a {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+
+  .mobile-navigation-links a.active {
+    font-weight: 700;
+  }
+
+  /* Linha abaixo dos links do menu mobile */
+.mobile-navigation-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #c92071;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Hover e página ativa */
+.mobile-navigation-links a:hover,
+.mobile-navigation-links a.active {
+  color: #c92071;
+}
+
+.mobile-navigation-links a:hover::after,
+.mobile-navigation-links a.active::after {
+  transform: scaleX(1);
+}
+
+  .mobile-navigation-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #CCCCCC;
+  }
+
+  .drawer-login {
+    width: 100%;
+  }
+
+  .drawer-login button {
+    width: 100%;
+  }
+
+  .mobile-navigation-footer .register-link {
+    font-size: 16px;
+  }
+}
+
+@keyframes slide-menu-in {
+  from {
+    opacity: 0.7;
+    transform: translateX(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Celulares estreitos */
+@media (max-width: 360px) {
+  .header {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .header-top {
+    grid-template-columns: 30px 1fr auto;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 118px;
+  }
+
+  .mobile-actions {
+    gap: 12px;
+  }
+
+  .mobile-navigation {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
 }
