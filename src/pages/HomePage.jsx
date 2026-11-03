@@ -1,28 +1,15 @@
 import Button from "../components/Button";
+import HeroBanner from "../components/HeroBanner/HeroBanner";
+import FeaturedCollections from "../components/FeaturedCollections/FeaturedCollections";
+import FeaturedCategories from "../components/FeaturedCategories/FeaturedCategories";
 
 function HomePage() {
-  function comprarAgora() {
-    alert("Você clicou em Comprar agora!");
-  }
-
-  function verDetalhes() {
-    alert("Você clicou em Ver detalhes!");
-  }
-
+  
   return (
     <main>
-      <h1>Digital Store</h1>
-      <p>Teste dos botões da loja.</p>
-
-      <Button variant="secundary" onClick={comprarAgora}>
-        Comprar
-      </Button>
-
-      {" "}
-
-      <Button variant="primary" onClick={verDetalhes}>
-        Ver detalhes
-      </Button>
+      <HeroBanner />
+      <FeaturedCollections />
+      <FeaturedCategories />
     </main>
   );
 }

@@ -1,8 +1,7 @@
-
-import Logo from './Logo';
+import Logo from '../Logo';
 import './Header.css';
-import Button from "../components/Button";
-import cartIcon from "../assets/mini-cart.svg";
+import Button from "../Button";
+import cartIcon from "../../assets/mini-cart.svg";
 import { Link } from 'react-router-dom';
 
 function Header() {

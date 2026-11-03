@@ -1,0 +1,111 @@
+
+.featured-collections {
+  padding: 50px 8%;
+  background-color: #f9f8fe;
+  font-family: 'Poppins', sans-serif;
+}
+
+.featured-collections h2 {
+  color: #474747;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.collections-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.collection-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 250px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.collection-card img {
+  position: absolute;
+  width: 400px;
+  height: 350px;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.collection-discount {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  z-index: 2;
+
+  background-color: #e7ff86;
+  color: #474747;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.collection-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 130px;
+  color: #1f1f1f;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.collection-card button {
+  position: absolute;
+  bottom: 80px;
+  left: 25px;
+  z-index: 2;
+
+  background-color: #ffffff;
+  color: #c92071;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.collection-card button:hover {
+  background-color: #c92071;
+  color: #ffffff;
+}
+
+.collection-card button:hover {
+  background-color: #c92071;
+  color: #ffffff;
+}
+
+.collection-card button:hover {
+  background-color: #c92071;
+  color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .collections-container {
+    flex-direction: column;
+  }
+
+  .collection-card {
+    min-height: 230px;
+  }
+}
