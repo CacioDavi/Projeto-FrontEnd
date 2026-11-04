@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Logo from '../../assets/logoHeader.svg';
 import './Header.css';
-import Button from "../Button";
+import Button from "../Button/Button";
 import cartIcon from "../../assets/Buy.svg";
 import iconSearch from "../../assets/Search.svg";
 import iconSearchActive from "../../assets/SearchActive.svg";

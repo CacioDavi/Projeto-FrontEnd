@@ -7,9 +7,13 @@ import Categories from './pages/Categories/Categories.jsx'
 import Orders from './pages/Orders/Orders.jsx'
 import Products from './pages/Products/Products.jsx'
 import Register from './pages/Register/Register.jsx'
+import Header from './components/Header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 function App() {
   return (
+    <>
+    <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -19,6 +23,8 @@ function App() {
       <Route path="/orders" element={<Orders />} />
       <Route path="/products" element={<Products />} />
     </Routes>
+    <Footer/>
+    </>
   )
 }
 
