@@ -15,40 +15,20 @@ const LargeFont = css`
 `
 
 const CardBox = styled.li`
-    ${CardBasicStyles}
     display: flex;
     flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 
     border: 1px red solid;
-
-    //max-width: 9.6rem;
-    //min-width: 1rem;
-    width: 47%;
-
-    margin: .2rem;
+    margin: 0;
     padding: .2rem;
 
     box-shadow: 0 .4rem 5px 3px rgba(0,0,0, .1);
 
-    @media (min-width: 375px) {
-        max-width: 90%;
-    }
-    @media (min-width: 425px) {
-        max-width: 31.7%;
-    }
-    @media (min-width: 768px) {
-        max-width: 24%;
-    }
-
-    transition: scale .1s;
-    /* &:hover {
-        cursor: pointer;
-        scale: 1.02;
-        box-shadow: 0 12px 15px 10px rgba(0,0,0,0.3);
-    } */
-
-     position: relative;
-`
+    position: relative;
+`;
 
 const PDiscountRate = styled.span`
     align-self: flex-start;
