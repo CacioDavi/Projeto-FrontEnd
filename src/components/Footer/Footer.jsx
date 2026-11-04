@@ -1,8 +1,8 @@
 import "./Footer.css";
-import logoFooter from "../assets/logo-footer.svg";
-import facebookIcon from "../assets/facebook.svg";
-import instagramIcon from "../assets/instagram.svg";
-import twitterIcon from "../assets/twitter.svg";
+import logoFooter from "../../assets/logo-footer.svg";
+import facebookIcon from "../../assets/facebook.svg";
+import instagramIcon from "../../assets/instagram.svg";
+import twitterIcon from "../../assets/twitter.svg";
 
 function Footer() {
   return (
