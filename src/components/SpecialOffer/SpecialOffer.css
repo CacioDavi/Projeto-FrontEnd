@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.special-offer {
+  font-family: 'Poppins', sans-serif;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 50px 8%;
+  background-color: #ffffff;
+}
+
+.special-offer-image {
+  width: 50%;
+}
+
+.special-offer-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.special-offer-content {
+  width: 50%;
+}
+
+.special-offer-content span {
+  color: #c92071;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.special-offer-content h2 {
+  color: #474747;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.special-offer-content p {
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.special-offer-content button {
+  background-color: #c92071;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 35px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.special-offer-content button:hover {
+  background-color: #991956;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .special-offer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .special-offer-image,
+  .special-offer-content {
+    width: 100%;
+  }
+}
