@@ -18,7 +18,7 @@ function Header() {
   const navigationLinks = (
     <>
       <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
-      <NavLink to="/products" onClick={closeMenu}>Produtos</NavLink>
+      <NavLink to="/produtos" onClick={closeMenu}>Produtos</NavLink>
       <NavLink to="/categories" onClick={closeMenu}>Categorias</NavLink>
       <NavLink to="/orders" onClick={closeMenu}>Meus Pedidos</NavLink>
     </>
