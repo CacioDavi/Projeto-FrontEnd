@@ -1,0 +1,25 @@
+.featured-products {
+  padding: 50px 8%;
+  background-color: #f9f8fe;
+  font-family: 'Poppins', sans-serif;
+}
+
+.featured-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.featured-products-header h2 {
+  color: #474747;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.featured-products-header a {
+  color: #c92071;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
