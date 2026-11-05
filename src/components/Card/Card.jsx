@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Card({ProductName="K-Swiss V8 - Masculino", ProductCategory = "Tênis", DiscountRate = 30, 
-  ProductImage = "/src/assets/sapato.png", Prices=[100,200], 
+  ProductImage = "/src/assets/Sapato.png", Prices=[100,200], 
   URL='/products/any', data=null}) {
 
     const Navigate = useNavigate();
