@@ -1,12 +1,15 @@
+
 import { Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home/Home.jsx'
 import Login from './pages/Login/Login.jsx'
-import Cart from './pages/Cart/Cart.jsx' 
+import Cart from './pages/Cart/Cart.jsx'
 import Categories from './pages/Categories/Categories.jsx'
 import Orders from './pages/Orders/Orders.jsx'
 import Products from './pages/Products/Products.jsx'
 import Register from './pages/Register/Register.jsx'
+
+import ProductListingPage from './pages/ProductListingPage.jsx'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import ProductDetails from './pages/ProductDetails/ProductDetails.jsx'
