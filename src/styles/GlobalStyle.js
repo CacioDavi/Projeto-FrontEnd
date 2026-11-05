@@ -1,3 +1,4 @@
+
 import { createGlobalStyle } from "styled-components"
 
 const globalStyles = createGlobalStyle`
@@ -5,23 +6,24 @@ const globalStyles = createGlobalStyle`
     * {
         font-family: 'Arial', 'sans-serif';
         box-sizing: border-box;
-
         margin: 0;
         padding: 0;
     }
 
     body {
-        height: 100dvh;
+        min-height: 100vh;
         width: 100%;
         background-color: #f7f9fc;
     }
 
     #root {
-        height: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     main {
-        height: 100%;
+        width: 100%;
     }
 
 `;
