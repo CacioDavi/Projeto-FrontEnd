@@ -1,6 +1,8 @@
 
 import Card from "../components/Card/Card";
 import { CardList } from "../components/CardList/CardList";
+import FilterGroup from "../components/FilterGroup/FilterGroup";
+import "./ProductListingPage.css";
 
 function ProductListingPage() {
   const products = [
@@ -30,24 +32,62 @@ function ProductListingPage() {
     },
   ];
 
-  return (
-    <main>
-      <h1>Lista de produtos</h1>
+  
+return (
+  <main className="product-listing">
+    <h1>Lista de produtos</h1>
 
-      <CardList>
-        {products.map((product) => (
-          <Card
-            key={product.id}
-            ProductName={product.name}
-            ProductCategory={product.category}
-            DiscountRate={product.discount}
-            ProductImage={product.image}
-            Prices={product.prices}
-          />
-        ))}
-      </CardList>
-    </main>
-  );
+    <div className="listing-content">
+      <aside className="filters">
+        <h2>Filtrar por</h2>
+
+        <FilterGroup
+          title="Marca"
+          inputType="checkbox"
+          name="marca"
+          options={["Adidas", "Balenciaga", "K-Swiss", "Nike", "Puma"]}
+        />
+
+        <FilterGroup
+          title="Categoria"
+          inputType="checkbox"
+          name="categoria"
+          options={["Esporte e lazer", "Casual", "Utilitário", "Corrida"]}
+        />
+
+        <FilterGroup
+          title="Gênero"
+          inputType="checkbox"
+          name="genero"
+          options={["Masculino", "Feminino", "Unissex"]}
+        />
+
+        <FilterGroup
+          title="Estado"
+          inputType="radio"
+          name="estado"
+          options={["Novo", "Usado"]}
+        />
+      </aside>
+
+      <section className="products">
+        <CardList>
+          {products.map((product) => (
+            <Card
+              key={product.id}
+              ProductName={product.name}
+              ProductCategory={product.category}
+              DiscountRate={product.discount}
+              ProductImage={product.image}
+              Prices={product.prices}
+            />
+          ))}
+        </CardList>
+      </section>
+    </div>
+  </main>
+);
+
 }
 
 export default ProductListingPage;

@@ -1,0 +1,35 @@
+
+.product-listing {
+  padding: 40px 8%;
+}
+
+.product-listing h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.listing-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.filters {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filters h2 {
+  font-size: 18px;
+  color: #474747;
+  margin-bottom: 10px;
+}
+
+.products {
+  flex: 1;
+  min-width: 0;
+}
