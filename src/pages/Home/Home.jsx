@@ -8,6 +8,7 @@ import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
 function HomePage() {
   
   return (
+    <>
     <main>
       <HeroBanner />
       <FeaturedCollections />
@@ -15,6 +16,7 @@ function HomePage() {
       <FeaturedProducts />
       <SpecialOffer />
     </main>
+    </>
   );
 }
 

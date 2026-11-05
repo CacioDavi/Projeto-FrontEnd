@@ -1,9 +1,10 @@
 
-.footer {
+#footer {
   background-color: #1f1f1f;
   color: #ffffff;
   padding: 50px 8% 25px;
   font-family: 'Inter', sans-serif;
+  margin-top: 2,rem;
 }
 
 .footer-content {

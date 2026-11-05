@@ -9,6 +9,7 @@ import Products from './pages/Products/Products.jsx'
 import Register from './pages/Register/Register.jsx'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import ProductDetails from './pages/ProductDetails/ProductDetails.jsx'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/categories" element={<Categories />} />
       <Route path="/orders" element={<Orders />} />
       <Route path="/products" element={<Products />} />
+      <Route path='/products/*' element={<ProductDetails/>} />
     </Routes>
     <Footer/>
     </>

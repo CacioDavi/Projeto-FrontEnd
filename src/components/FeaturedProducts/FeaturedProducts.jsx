@@ -9,7 +9,7 @@ function FeaturedProducts() {
     <section className="featured-products">
       <div className="featured-products-header">
         <h2>Produtos em alta</h2>
-        <a href="/produtos">Ver todos →</a>
+        <a href="/products">Ver todos →</a>
       </div>
 
       <CardList>
