@@ -12,22 +12,23 @@ import Register from './pages/Register/Register.jsx'
 import ProductListingPage from './pages/ProductListingPage.jsx'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import ProductDetails from './pages/ProductDetails/ProductDetails.jsx'
 
 function App() {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/produtos" element={<ProductListingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/products" element={<Products />} />
-      </Routes>
-      <Footer />
+    <Header/>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/categories" element={<Categories />} />
+      <Route path="/orders" element={<Orders />} />
+      <Route path="/products" element={<Products />} />
+      <Route path='/products/*' element={<ProductDetails/>} />
+    </Routes>
+    <Footer/>
     </>
   )
 }

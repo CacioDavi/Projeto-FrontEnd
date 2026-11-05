@@ -10,15 +10,19 @@ const ListContainer = styled.ul`
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
   width: 100%;
-  padding: 0;
+  padding: 1rem;
   margin: 0;
   list-style: none;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 320px) {
     grid-template-columns: 1fr;
   }
 `;

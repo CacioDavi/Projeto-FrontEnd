@@ -21,13 +21,19 @@ const CardBox = styled.li`
     min-width: 0;
     box-sizing: border-box;
 
-    border: 1px red solid;
     margin: 0;
     padding: .2rem;
 
     box-shadow: 0 .4rem 5px 3px rgba(0,0,0, .1);
 
     position: relative;
+
+    transition: transform .1s;
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 `;
 
 const PDiscountRate = styled.span`
