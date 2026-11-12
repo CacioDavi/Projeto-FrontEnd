@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import '@coreui/coreui/dist/css/coreui.min.css'
 
 import Home from './pages/Home/Home.jsx'
 import Login from './pages/Login/Login.jsx'
