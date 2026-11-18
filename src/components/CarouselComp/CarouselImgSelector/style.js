@@ -4,10 +4,11 @@ const ThumbList = styled.ul`
     display: flex;
     flex-direction: row;
     padding: 0;
+    gap: 15px;
 
     list-style: none;
 
-    justify-content: space-between;
+    justify-content: center;
 
     & li > label {
         width: 6rem;
@@ -26,7 +27,6 @@ const ThumbList = styled.ul`
         height: 100%;
         object-fit: contain;
 
-        border: 1px blue solid;
     }
 
     & li > label:has(> input:checked) {

@@ -1,4 +1,5 @@
-import {styled, css} from "styled-components";
+
+import styled from "styled-components";
 
 const ControlsContainer = styled.div`
     position: absolute;
@@ -9,19 +10,34 @@ const ControlsContainer = styled.div`
 
     display: flex;
     justify-content: space-between;
-`
+`;
 
 const CarButton = styled.button`
     width: 5rem;
     height: 100%;
 
-    background-color: unset;
+    background-color: transparent;
     border: none;
-`
+    cursor: pointer;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+    opacity: 0.8;
+    }
+
+    &:active {
+    transform: scale(0.95);
+    }
+`;
 
 const ButtonImg = styled.img`
     width: 100%;
-    color: white;
-`
+    transition: opacity 0.3s ease;
 
-export { ControlsContainer, CarButton, ButtonImg }
+    ${CarButton}:hover & {
+        opacity: 0.7;
+    }
+`;
+
+export { ControlsContainer, CarButton, ButtonImg };
