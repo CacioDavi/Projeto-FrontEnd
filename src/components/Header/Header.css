@@ -6,6 +6,9 @@
   background-color: #ffffff;
   box-sizing: border-box;
   font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Linha superior: logo, pesquisa e ações */
@@ -14,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  width: 100%;
 }
 
 .logo-link {
